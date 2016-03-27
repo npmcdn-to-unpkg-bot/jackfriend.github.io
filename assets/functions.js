@@ -28,6 +28,20 @@ var insultArray = [
 var insult = insultArray[Math.floor(Math.random() * insultArray.length)];
 $('.insult').append(insult);
 
+if (typeof L == 'object') {
+    var mymap = L.map('mapid').setView([40.71277777777778, -74.00583333333333], 13);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/jackfriend.ph3240ep/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFja2ZyaWVuZCIsImEiOiJjaW05eG05emUwM3BwdGtraXQ2aHE2ZHlyIn0.-Jj5No0a-ZDldaZKLuSFqQ', {
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        maxZoom: 18,
+        id: 'jackfriend.ph3240ep',
+        accessToken: 'pk.eyJ1IjoiamFja2ZyaWVuZCIsImEiOiJjaW05eG05emUwM3BwdGtraXQ2aHE2ZHlyIn0.-Jj5No0a-ZDldaZKLuSFqQ'
+    }).addTo(mymap);
+};
+
+$('.fa-times').on('click', function () {
+    $('.form').fadeOut('fast');
+});
+
 if (    $(window).width()    <= 600) {
   $('.nav-menu').hide();
   $('.social-media').hide();

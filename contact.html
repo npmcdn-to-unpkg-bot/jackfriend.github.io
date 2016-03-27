@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="/assets/index.css">
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css">
     <title></title>
   </head>
-  <body class="index-page"><div class="container nav-container">
+  <body><div class="container nav-container">
   <div class="wrapper nav-wrapper">
     <div class="mobile-nav-wrapper"><a href="index.html"><img src="assets/img/favicon.png" alt="Favicon" class="favicon"/></a><a href="#" class="ion ion-navicon-round"></a></div>
     <ul class="nav-menu">
@@ -19,12 +20,31 @@
     <ul class="social-media">
       <li><a href="https://www.instagram.com/jackfriend2000/" class="fa fa-instagram fa-lg"></a></li>
       <li><a href="https://github.com/jackfriend" class="fa fa-github fa-lg"></a></li>
-      <li><a href="mailto:jackwilliamfriend@gmail.com" class="fa fa-envelope-o fa-lg"></a></li>
+      <li><a href="contact.html" class="fa fa-envelope-o fa-lg"></a></li>
     </ul>
   </div>
 </div>
+<div class="container contact-container">
+  <div class="wrapper contact-wrapper">
+    <div id="mapid"></div>
+    <div class="form">
+      <div class="form-header"><a href="#" class="fa fa-times"></a>
+        <h1>Contact Me</h1>
+        <p>Feel free to drop a suggestion, comment or question below. (Or just enjoy this map of NYC)</p>
+      </div>
+      <div class="form-body">
+        <form action="https://formspree.io/jackwilliamfriend@gmail.com" method="POST">
+          <input type="text" name="name" placeholder="Your name"/>
+          <input type="email" name="_replyto" placeholder="Your email"/>
+          <textarea name="content"></textarea>
+          <input type="submit" value="Send"/>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
     <script src="assets/functions.js"></script>
   </body>
 </html>
